@@ -58,7 +58,7 @@ const EventContent = ({event}) => {
                     <FavButton event={event}/>
                     <img src={cover_url} alt={cover_alt}/>
                     <p>{cover_credit}</p>
-                    <p>{descriptionRaw}</p>
+                    <div>{descriptionRaw}</div>
                     <p>{dateDescriptionRaw}</p>
                 </article>
                 {/*SIDE BAR*/}

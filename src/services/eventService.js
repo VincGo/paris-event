@@ -2,10 +2,10 @@ import axios from "axios";
 
 const eventService = {
 
-    //15 prochains évenements qui vont bientôt finir
-    fetchAll() {
+    //Retourn le dernier événement modifié
+    fetchLastUpadted() {
         return axios
-            .get("https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?sort=date_end&limit=15")
+            .get("https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?sort=updated_at&limit=1")
             .then((response) => response.data)
             .catch((err) => console.log(err))
     },

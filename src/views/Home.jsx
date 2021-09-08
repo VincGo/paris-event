@@ -9,7 +9,7 @@ const Home = () => {
     /* Lors du chargement de la page injecte les données de l'API dans la variable eventArray */
     useEffect(() => {
         eventService
-            .fetchAll()
+            .fetchLastUpadted()
             .then((data) => setEventArray(data.records))
     }, [])
 

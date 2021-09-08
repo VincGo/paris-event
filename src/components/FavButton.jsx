@@ -20,12 +20,12 @@ const FavButton = ({event}) => {
     }
 
     return (
-        <div>
+        <>
             <button onClick={addOrRemoveFav}>
                 {/*Lors du render du bouton on check si il est présent dans la localStorage et affiche le text en fonction*/}
                 {favorites ? 'Retirer' : 'Ajouter'}
             </button>
-        </div>
+        </>
 
     );
 };
