@@ -1,8 +1,8 @@
-import React from 'react';
-
 /**
  * Affichage des données sous forme de card pour Home et List.
  */
+import FavButton from "./FavButton";
+
 const Card = ({event}) => {
     const {title, cover_url, cover_alt, date_start, date_end, lead_text} = event.record.fields
     const id = event.record.id
@@ -14,7 +14,7 @@ const Card = ({event}) => {
             <p>{date_start}</p>
             <p>{date_end}</p>
             <p>{lead_text}</p>
-            <button>Ajouter aux favoris</button>
+            <FavButton event={event}/>
             <button>
                 <a href={`evenement/${id}`}>Plus d'informations</a>
             </button>

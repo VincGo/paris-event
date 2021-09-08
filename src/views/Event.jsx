@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import eventService from "../services/eventService";
 import {Parser} from "html-to-react";
+import FavButton from "../components/FavButton";
 
 const Event = () => {
     //Récupère l'ID dans l'url
@@ -54,6 +55,7 @@ const EventContent = ({event}) => {
             <section>
                 {/*MAIN CONTENT*/}
                 <article>
+                    <FavButton event={event}/>
                     <img src={cover_url} alt={cover_alt}/>
                     <p>{cover_credit}</p>
                     <p>{descriptionRaw}</p>
