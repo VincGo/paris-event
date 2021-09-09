@@ -1,6 +1,6 @@
 import eventLocaleStorage from "../services/eventLocaleStorage";
 
-const FavButton = ({event}) => {
+const FavButton = ({event, onClick}) => {
     //Récupère l'ID de l'event
     const key = event.record.id
     //On récupère l'event si il est enregistré dans le localStorage. Si il y a rien renvoi NULL
@@ -21,7 +21,10 @@ const FavButton = ({event}) => {
 
     return (
         <>
-            <button onClick={addOrRemoveFav}>
+            <button onClick={(e) => {
+                addOrRemoveFav(e);
+                onClick && onClick()
+            }}>
                 {/*Lors du render du bouton on check si il est présent dans la localStorage et affiche le text en fonction*/}
                 {favorites ? 'Retirer' : 'Ajouter'}
             </button>

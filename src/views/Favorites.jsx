@@ -19,7 +19,7 @@ const Favorites = () => {
         <div>
             <h1>Favoris</h1>
             {favStorage && favStorage.map((event) =>
-                <Card key={event.record.id} event={event} />
+                <Card key={event.record.id} event={event} onClick={() => setFavStorage(favStorage.filter(e => e.record.id !== event.record.id ))}/>
             )}
         </div>
     );

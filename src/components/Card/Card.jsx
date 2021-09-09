@@ -3,7 +3,7 @@
  */
 import FavButton from "../FavButton";
 
-const Card = ({event}) => {
+const Card = ({event, onClick}) => {
     const {title, cover_url, cover_alt, date_start, date_end, lead_text} = event.record.fields
     const id = event.record.id
 
@@ -14,7 +14,7 @@ const Card = ({event}) => {
             <p>{date_start}</p>
             <p>{date_end}</p>
             <p>{lead_text}</p>
-            <FavButton event={event}/>
+            <FavButton event={event} onClick={onClick}/>
             <button>
                 <a href={`evenement/${id}`}>Plus d'informations</a>
             </button>
