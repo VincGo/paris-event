@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import eventService from "../services/eventService";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 const Home = () => {
     /* Stockage des données de l'API */
@@ -15,11 +15,6 @@ const Home = () => {
 
     return (
         <div id={"home"}>
-            <header className={'text-center'}>
-                <h1 className={"text-xxl"}>Bienvenue sur Paris Events</h1>
-                <p>L'application qui permet de rechercher en direct les prochains événements Parisiens.</p>
-            </header>
-            <hr/>
             <section>
                 { eventArray && eventArray.map((event) => <Card key={event.record.id} event={event}/>) }
             </section>

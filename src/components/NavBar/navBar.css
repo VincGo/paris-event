@@ -1,0 +1,19 @@
+nav {
+    padding: 10px;
+    text-align: center;
+    background-color: #fddbcf4a;
+}
+
+nav a{
+    text-decoration: none;
+    color: #24376f;
+    font-size: 22px;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #afc8e7;
+    color: #fddbcf;
+    border-radius: 5px;
+}

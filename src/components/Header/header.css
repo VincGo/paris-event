@@ -1,0 +1,28 @@
+#header {
+    background-image: url("../../3286410.jpg");
+    background-size: cover;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#header div {
+    position: relative;
+    top: 220px;
+    color: #24376f;
+}
+
+#header .button-search {
+    background-color: #fddbcf;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #24376f;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+#header .button-search:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}

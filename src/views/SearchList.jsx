@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import eventService from "../services/eventService";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 const SearchList = () => {
     const inputSearch = useRef();

@@ -1,4 +1,17 @@
+@import "components/Header/header.css";
+@import "components/NavBar/navBar.css";
+@import "components/Card/card.css";
+
 /* GLOBAL CSS*/
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
 main {
   max-width: 1300px;
   margin: auto;
@@ -10,43 +23,4 @@ main {
 
 .text-center {
   text-align: center;
-}
-
-/* NAV BAR */
-nav {
-  background: black;
-  padding: 10px;
-}
-nav a{
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  margin: 0 20px;
-}
-
-nav a:hover {
-  color: purple
-}
-
-/* HOME PAGE*/
-/* HEADER */
-#home header hr {
-  color: #e3e3e3;
-}
-
-/*ALL CARD*/
-#home section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* CARD */
-.card {
-  width: 300px;
-  margin: 10px;
-  border: 1px solid black;
-}
-img {
-  width: 300px;
-  height: 300px;
 }

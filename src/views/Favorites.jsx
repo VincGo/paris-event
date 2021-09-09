@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import eventLocaleStorage from "../services/eventLocaleStorage";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 const Favorites = () => {
     const [favStorage, setFavStorage] = useState([])

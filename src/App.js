@@ -1,15 +1,15 @@
 import './App.css';
 import Home from "./views/Home";
 import {BrowserRouter, Route} from "react-router-dom";
-import NavBar from "./components/NavBar";
 import SearchList from "./views/SearchList";
 import Event from "./views/Event"
 import Favorites from "./views/Favorites";
+import Header from "./components/Header/Header";
 
 function App() {
     return (
         <BrowserRouter >
-            <NavBar />
+            <Header />
             <main>
                 <Route path={"/"}  component={Home} exact/>
                 <Route path={"/liste-des-evenements"}  component={SearchList} />
