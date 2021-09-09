@@ -7,7 +7,7 @@ const FavButton = ({event}) => {
     const favorites = eventLocaleStorage.getFavoritesList(key)
 
     //Si l'event est enregistré dans le loacalStorage, alors on le supprime et on change le text du bouton.
-    // Et inversement si l'event n'est pas enregistré dans l'event.
+    //Et inversement si l'event n'est pas enregistré dans l'event.
     function addOrRemoveFav(e) {
         const key = event.record.id
         if (eventLocaleStorage.getFavoritesList(key)) {
