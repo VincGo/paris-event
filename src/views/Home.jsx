@@ -16,6 +16,8 @@ const Home = () => {
     return (
         <div id={"home"}>
             <section>
+                <h1 className={"text-xxl"}>Dernier ajout</h1>
+                <div className={"title-decoration"} />
                 { eventArray && eventArray.map((event) => <Card key={event.record.id} event={event}/>) }
             </section>
         </div>

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import eventService from "../services/eventService";
 import {Parser} from "html-to-react";
-import FavButton from "../components/FavButton";
+import FavButton from "../components/FavButton/FavButton";
 
 const Event = () => {
     //Récupère l'ID dans l'url

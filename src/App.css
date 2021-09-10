@@ -1,6 +1,7 @@
 @import "components/Header/header.css";
 @import "components/NavBar/navBar.css";
 @import "components/Card/card.css";
+@import "components/FavButton/favButton.css";
 
 /* GLOBAL CSS*/
 body, html {
@@ -13,7 +14,7 @@ body, html {
 }
 
 main {
-  max-width: 1300px;
+  max-width: 1000px;
   margin: auto;
 }
 

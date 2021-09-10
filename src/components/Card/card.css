@@ -1,14 +1,69 @@
-#home section {
+.card {
     display: flex;
     flex-wrap: wrap;
+    margin: 40px 0;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    opacity: 0.9;
+    transition: all .2s ease-in-out;
+    /*background-color: #24376f;*/
 }
 
-.card {
-    width: 300px;
-    margin: 10px;
-    border: 1px solid black;
+.card:hover {
+    opacity: 1;
+    transform: scale(1.01);
+    background-color: #24376f;
 }
+
+.card:hover h1 {
+    color: #fddbcf;
+}
+
+.card:hover article p {
+    color: white;
+}
+
+.card:hover .date {
+    color: #999999;
+}
+
 .card img {
-    width: 300px;
+    width: 50%;
     height: 300px;
+    border-radius: 10px;
+}
+
+.card article {
+    width: 47%;
+    margin-left: auto;
+}
+
+.card article h1 {
+    font-size: 25px;
+    margin: 10px 0;
+    color: #24376f;
+}
+
+.card article p {
+    color: black;
+    line-height: 1.4;
+}
+
+.card .date {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+}
+
+.title-decoration {
+    background: #24376f;
+    height: 12px;
+    width: 100px;
+    border-radius: 30px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
 }
