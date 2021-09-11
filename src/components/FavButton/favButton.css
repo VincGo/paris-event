@@ -1,14 +1,10 @@
-.favButton {
-    color: #24376f;
-    display: none;
-}
-
 .favButton svg {
     font-size: 30px;
     padding: 10px 10px 0 0;
+    display: none;
 }
 
-.card:hover .favButton {
+.card:hover .favButton svg {
     display: block;
     color: #fddbcf;
 }

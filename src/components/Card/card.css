@@ -1,13 +1,12 @@
 .card {
-    display: flex;
-    flex-wrap: wrap;
     margin: 40px 0;
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     opacity: 0.9;
     transition: all .2s ease-in-out;
-    /*background-color: #24376f;*/
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card:hover {
@@ -54,6 +53,10 @@
     font-size: 14px;
     color: #999;
     margin: 0;
+}
+
+.card svg {
+    position: relative;
 }
 
 .card-title {
