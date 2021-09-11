@@ -2,7 +2,8 @@
 @import "components/NavBar/navBar.css";
 @import "components/Card/card.css";
 @import "components/FavButton/favButton.css";
-
+@import "components/Title/title.css";
+@import "views/SearchList/searchList.css";
 /* GLOBAL CSS*/
 body, html {
   height: 100%;

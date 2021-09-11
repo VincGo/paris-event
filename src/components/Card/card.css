@@ -56,13 +56,6 @@
     margin: 0;
 }
 
-.title-decoration {
-    background: #24376f;
-    height: 12px;
-    width: 100px;
-    border-radius: 30px;
-}
-
 .card-title {
     display: flex;
     justify-content: space-between;

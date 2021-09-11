@@ -1,7 +1,7 @@
 import './App.css';
 import Home from "./views/Home";
 import {BrowserRouter, Route} from "react-router-dom";
-import SearchList from "./views/SearchList";
+import SearchList from "./views/SearchList/SearchList";
 import Event from "./views/Event"
 import Favorites from "./views/Favorites";
 import Header from "./components/Header/Header";
