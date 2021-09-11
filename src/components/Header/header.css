@@ -4,11 +4,13 @@
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #header div {
-    position: relative;
-    top: 220px;
+    margin-bottom: 32px;
     color: #24376f;
 }
 
@@ -24,5 +26,6 @@
 }
 
 #header .button-search:hover {
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    background-color: #24376f;
+    color: white;
 }

@@ -4,10 +4,14 @@ nav {
     background-color: #fddbcf4a;
 }
 
+nav ol {
+    padding: 0;
+}
+
 nav a{
     text-decoration: none;
     color: #24376f;
-    font-size: 22px;
+    font-size: 18px;
     padding: 5px 10px;
     margin: 0 10px;
 }
@@ -16,4 +20,39 @@ nav a:hover {
     background-color: #24376f;
     color: #fddbcf;
     border-radius: 5px;
+}
+
+nav svg {
+    font-size: 40px;
+    color: #24376f;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    nav svg {
+        display: block;
+        cursor: pointer;
+        color: #24376f;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    nav ol {
+        display: none;
+        flex-direction: column;
+        background-color: #24376f;
+        color: white;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    nav a {
+        color: white;
+        margin-bottom: 5px;
+    }
 }
