@@ -4,6 +4,7 @@
 @import "components/FavButton/favButton.css";
 @import "components/Title/title.css";
 @import "views/SearchList/searchList.css";
+@import "views/Event/event.css";
 /* GLOBAL CSS*/
 body, html {
   height: 100%;

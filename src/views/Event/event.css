@@ -1,0 +1,119 @@
+#event-article {
+    margin-top: 40px;
+    display: flex;
+}
+
+#event-article article {
+    width: 700px;
+}
+
+#event-article-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#event-article-title svg {
+    margin-top: 30px;
+}
+
+figure{
+    margin: 0 0 30px 0;
+}
+
+figure img{
+    width: 100%;
+}
+
+figcaption{
+    margin: 0;
+    font-style: italic;
+    color: #9999;
+    font-size: 12px;
+}
+
+#event-article article div img {
+    width: 100%;
+}
+
+#event-article aside {
+    background-color: #24376f;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 30px 25px;
+    width: 300px;
+    margin-left: 30px;
+    height: min-content;
+}
+
+#event-article aside div {
+    text-align: center;
+}
+
+#event-article h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: white;
+}
+
+#event-article hr {
+    color: white;
+    margin: 30px 0 10px 0;
+}
+
+#event-article aside svg {
+    font-size: 30px;
+    color: white;
+}
+
+.info-title {
+    font-weight: 700;
+    padding: 20px 0 10px 0;
+    margin: 0;
+}
+
+.info-text {
+    font-weight: 200;
+    margin: 0;
+}
+
+.info-contact-section{
+    display: flex;
+}
+
+.info-contact-section svg {
+    font-size: 25px !important;
+}
+
+.info-contact-section .info-text{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.info-contact-social {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1000px){
+    #event-article {
+        display: block;
+        margin-top: 30px;
+    }
+
+    #event-article, #event-article-title {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #event-article article {
+        width: 100%;
+    }
+
+    #event-article aside {
+        width: auto;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
