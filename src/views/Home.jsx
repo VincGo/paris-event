@@ -18,7 +18,9 @@ const Home = () => {
         <div id={"home"}>
             <section>
                 <Title title={"Dernier ajout"} />
-                { eventArray && eventArray.map((event) => <Card key={event.record.id} event={event}/>) }
+                <div id={"card-list"}>
+                    { eventArray && eventArray.map((event) => <Card key={event.record.id} event={event}/>) }
+                </div>
             </section>
         </div>
     );

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import eventLocaleStorage from "../services/eventLocaleStorage";
 import Card from "../components/Card/Card";
+import Title from "../components/Title/Title";
 
 const Favorites = () => {
     const [favStorage, setFavStorage] = useState([])
@@ -21,7 +22,7 @@ const Favorites = () => {
 
     return (
         <div>
-            <h1>Favoris</h1>
+            <Title title={"Favoris"}/>
             {favStorage && favStorage.map((event) =>
                 <Card key={event.record.id} event={event} onClick={() => {removeCard(event)}}/>
             )}

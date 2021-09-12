@@ -14,6 +14,14 @@ const SearchList = () => {
             .searchResult(search)
             .then((data) => setSearchArray(data.records))
             .catch((err) => console.log(err))
+
+        inputSearch.current.value = ''
+    }
+
+    function handleKeyPress (e) {
+        if(e.key === 'Enter') {
+            searchEvent()
+        }
     }
 
     return (
@@ -21,14 +29,16 @@ const SearchList = () => {
             <header>
                 <Title title={'Liste des événements'}/>
                 <div id={"search"}>
-                    <input type="text" placeholder={"Recherchez les prochains événements"} ref={inputSearch}/>
+                    <input type="text" placeholder={"Recherchez les prochains événements"} ref={inputSearch} onKeyPress={handleKeyPress}/>
                     <button onClick={searchEvent}>
                         <IoIosSearch />
                     </button>
                 </div>
 
             </header>
-            {searchArray && searchArray.map((data) => <Card key={data.record.id} event={data}/>)}
+            <div id={'card-list'}>
+                {searchArray && searchArray.map((data) => <Card key={data.record.id} event={data}/>)}
+            </div>
         </div>
     );
 };

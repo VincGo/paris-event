@@ -33,9 +33,15 @@
     border-radius: 10px;
 }
 
+.card:nth-child(even) img {
+    order: 2;
+}
+
 .card article {
     width: 47%;
     margin-left: auto;
+    margin-right: auto;
+
 }
 
 .card article h1 {
@@ -62,4 +68,37 @@
 .card-title {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px){
+    .card {
+        display: block;
+        width: 500px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card article {
+        width: auto;
+        padding: 15px;
+    }
+
+    #card-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #search input {
+        width: 100% !important;
+    }
+
+    .card {
+        width: auto;
+    }
 }

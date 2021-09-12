@@ -31,3 +31,10 @@ main {
 .d-flex {
   display: flex !important;
 }
+
+@media screen and (max-width: 1000px){
+  main {
+    width: auto;
+    margin: 0 20px;
+  }
+}
