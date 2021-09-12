@@ -5,6 +5,7 @@ import SearchList from "./views/SearchList/SearchList";
 import Event from "./views/Event/Event"
 import Favorites from "./views/Favorites";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path={"/evenement/:id"} component={Event} />
                 <Route path={"/favoris"} component={Favorites}/>
             </main>
+            <Footer />
         </BrowserRouter>
     );
 }

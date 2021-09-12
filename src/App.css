@@ -5,6 +5,7 @@
 @import "components/Title/title.css";
 @import "views/SearchList/searchList.css";
 @import "views/Event/event.css";
+@import "components/Footer/footer.css";
 /* GLOBAL CSS*/
 body, html {
   height: 100%;
@@ -18,6 +19,7 @@ body, html {
 main {
   max-width: 1000px;
   margin: auto;
+  min-height: 50%;
 }
 
 .text-xxl {

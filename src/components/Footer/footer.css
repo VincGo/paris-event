@@ -1,0 +1,34 @@
+footer {
+    background-color: #fddbcf;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+footer div {
+    text-align: center;
+    margin: 20px;
+}
+
+footer a, footer h3, footer p{
+    color: #24376f;
+    margin: 0;
+}
+
+hr {
+    color: #24376f;
+    margin: 20px;
+}
+
+footer p {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+footer a svg{
+    font-size: 35px;
+}
