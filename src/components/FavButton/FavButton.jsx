@@ -5,20 +5,22 @@ import {useState} from "react";
 const FavButton = ({event, onClick}) => {
     //Récupère l'ID de l'event
     const key = event.record.id
-    //On récupère l'event si il est enregistré dans le localStorage. Si il y a rien renvoi NULL
     const favorites = eventLocaleStorage.getFavoritesList(key)
-    const [favStorage, setStorage] = useState(favorites)
+    const [heart, setHeart] = useState(favorites)
 
-    /*Si l'event est enregistré dans le loacalStorage, alors on le supprime et on change le text du bouton.
-    Et inversement si l'event n'est pas enregistré dans l'event.*/
     function addOrRemoveFav(e) {
         e.preventDefault()
-        const key = event.record.id
-        if (eventLocaleStorage.getFavoritesList(key)) {
-            eventLocaleStorage.removeFavoritesList(key)
+        const favStorage = eventLocaleStorage.getFavoritesList()
+        let pos = favStorage.findIndex(event => event.record.id === key)
+        if(pos > -1) {
+            //remove
+            favStorage.splice(pos, 1)
         } else {
-            eventLocaleStorage.saveFavoritesList(key, event)
+            //add
+            favStorage.push(event)
         }
+        eventLocaleStorage.saveFavoritesList(favStorage)
+        setHeart(favStorage)
     }
 
     return (
@@ -26,10 +28,9 @@ const FavButton = ({event, onClick}) => {
             <span className={"favButton"} onClick={(e) => {
                 addOrRemoveFav(e);
                 onClick && onClick()
-                setStorage(!favStorage)
             }}>
                 {/*Lors du render du bouton on check si il est présent dans la localStorage et affiche le text en fonction*/}
-                {favStorage ? <IoIosHeart/> : <IoIosHeartEmpty/>}
+                {heart.some(data => data.record.id === key) ? <IoIosHeartEmpty/> : <IoIosHeart/>}
             </span>
         </>
     );

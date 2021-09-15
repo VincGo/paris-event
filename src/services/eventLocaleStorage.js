@@ -1,9 +1,11 @@
+const key = "paris-events"
+
 const StorageServices =  {
-    getFavoritesList(key) {
-        return JSON.parse(window.localStorage.getItem(key))
+    getFavoritesList() {
+        return JSON.parse(window.localStorage.getItem(key)) || []
     },
 
-    saveFavoritesList (key, data) {
+    saveFavoritesList (data) {
         window.localStorage.setItem(key, JSON.stringify(data))
     },
 

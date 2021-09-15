@@ -1,30 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import eventLocaleStorage from "../services/eventLocaleStorage";
 import Card from "../components/Card/Card";
 import Title from "../components/Title/Title";
 
 const Favorites = () => {
-    const [favStorage, setFavStorage] = useState([])
-    let favArr = []
-    //Récupère les event dans le local storage, puis les push dans favArr. Ensuite favArr transmet les données à favStorage pour pouvoir manipuler les données.
-    useEffect(() => {
-        for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i)
-            const data = eventLocaleStorage.getFavoritesList(key)
-            favArr.push(data)
-        }
-        setFavStorage(favArr)
-    }, [])
+    const data = eventLocaleStorage.getFavoritesList()
+    const [favStorage, setFavStorage] = useState(data)
 
-    function removeCard (event) {
-        setFavStorage(favStorage.filter(e => e.record.id !== event.record.id ))
+    function removeCard() {
+        const data = eventLocaleStorage.getFavoritesList()
+        setFavStorage(data)
     }
 
     return (
         <div>
             <Title title={"Favoris"}/>
-            {favStorage && favStorage.map((event) =>
-                <Card key={event.record.id} event={event} onClick={() => {removeCard(event)}}/>
+            {favStorage.length === 0 && <p>Vous n'avez pas encore de favoris.</p>}
+            {favStorage && favStorage.map((event, index) =>
+                <Card key={index} event={event} onClick={removeCard}/>
             )}
         </div>
     );
