@@ -3,11 +3,11 @@ import {IoIosHeart, IoIosHeartEmpty} from 'react-icons/io'
 import {useState} from "react";
 
 const FavButton = ({event, onClick}) => {
-    //Récupère l'ID de l'event
     const key = event.record.id
-    const favorites = eventLocaleStorage.getFavoritesList(key)
+    const favorites = eventLocaleStorage.getFavoritesList()
     const [heart, setHeart] = useState(favorites)
 
+    //Ajoute l'évènement dans le local si il n'y est pas présent. Dans le cas contraire le retire.
     function addOrRemoveFav(e) {
         e.preventDefault()
         const favStorage = eventLocaleStorage.getFavoritesList()
@@ -29,8 +29,8 @@ const FavButton = ({event, onClick}) => {
                 addOrRemoveFav(e);
                 onClick && onClick()
             }}>
-                {/*Lors du render du bouton on check si il est présent dans la localStorage et affiche le text en fonction*/}
-                {heart.some(data => data.record.id === key) ? <IoIosHeartEmpty/> : <IoIosHeart/>}
+                {/*Lors du render du bouton on check si il est présent dans la localStorage et affiche le bon icon*/}
+                {heart.some(data => data.record.id === key) ? <IoIosHeart/> : <IoIosHeartEmpty/> }
             </span>
         </>
     );

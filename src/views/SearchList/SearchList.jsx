@@ -50,7 +50,7 @@ const SearchList = () => {
                     <Loader type={"TailSpin"} color="#24376f" height={80} width={80}/>
                 </div>
                 }
-                {!data && <p>Aucun événement trouvé pour votre rechercher.</p>}
+                {!data && <p>Aucun événement trouvé pour votre recherche.</p>}
                 {searchArray && searchArray.map((data) => <Card key={data.record.id} event={data}/>)}
             </div>
         </div>

@@ -23,7 +23,7 @@ const Home = () => {
     return (
         <div id={"home"}>
             <section>
-                <Title title={"Dernier ajout"}/>
+                <Title title={"Dernière publication"}/>
                 <div id={"card-list"}>
                     {!loading &&
                     <div className={"loader"}>
